@@ -7,6 +7,12 @@ Projeto _open-source_ que você pode colaborar aqui no GitHub ou apenas deixando
 
 <img align="center" src="imgs-readme/effigy_crying-3.jpg"/>
 
+# Menu #
+
+- [Tecnologias Utilizadas](#tecnologias-utilizadas)
+- [Comandos](#comandos-v01)
+- [Changelog](#changelog)
+
 # Tecnologias utilizadas #
 - Python
     - pyTelegrambotAPI
