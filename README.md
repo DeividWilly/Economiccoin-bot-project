@@ -1,9 +1,21 @@
 <h1 align="center">
     :moneybag:<br>:robot:CoinBot
 </h1>
-Projeto do Economiccoin_bot. Bot para Telegram que retorna cotações de algumas moedas em preço atualizadas.
 
-<img src="imgs-readme/effigy_crying-3.jpg"/>
+Bot para o Telegram. Retorna e manda cotações das moedas desejadas como Dólar para Real Brasileiro.
+Projeto _open-source_ que você pode colaborar aqui no GitHub ou apenas deixando o seu feedback.
+
+<img align="center" src="imgs-readme/effigy_crying-3.jpg"/>
+
+# Tecnologias utilizadas #
+- Python
+    - pyTelegrambotAPI
+    - JSON
+    - requests
+- Heroku
+- Sublime Text
+- Visual Studio Code
+- Linux Mint
 
 # Comandos (v0.1) #
 
