@@ -1,5 +1,6 @@
 <h1 align="center">
     :moneybag:<br>:robot:CoinBot
+    <br><a href="https://t.me/economiccoin_bot" target="_blank"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"></a>
 </h1>
 
 Bot para o Telegram. Retorna e manda cotações das moedas desejadas como Dólar para Real Brasileiro.
