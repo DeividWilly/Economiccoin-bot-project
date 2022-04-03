@@ -1,4 +1,6 @@
-# Economiccoin-bot-project
+<h1 align="center">
+    :moneybag:<br>CoinBot
+</h1>
 Projeto do Economiccoin_bot. Bot para Telegram que retorna cotações de algumas moedas em preço atualizadas.
 
 <img src="imgs-readme/effigy_crying-3.jpg"/>
