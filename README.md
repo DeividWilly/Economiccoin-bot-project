@@ -1,5 +1,5 @@
 <h1 align="center">
-    :moneybag:<br>CoinBot
+    :moneybag:<br>:robot:CoinBot
 </h1>
 Projeto do Economiccoin_bot. Bot para Telegram que retorna cotações de algumas moedas em preço atualizadas.
 
