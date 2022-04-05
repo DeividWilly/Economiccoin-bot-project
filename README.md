@@ -66,3 +66,18 @@ Sai API: _AwesomeAPI_
 **Corrigido: Erros ortográficos**
 `/ajuda` **atualizada**
 Melhoria: **Valores retornados mostram suas fontes**
+
+# Autor <br>
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/DeividWilly">
+        <img src="https://avatars.githubusercontent.com/u/82972938?v=4" width="100px;" alt="Anaak Jahad foto de perfil Deivid Willy"/><br>
+        <sub>
+          <b>Deivid Willy</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
