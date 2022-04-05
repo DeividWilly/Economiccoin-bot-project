@@ -3,6 +3,8 @@
     <br><a href="https://t.me/economiccoin_bot" target="_blank"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"></a>
 </h1>
 
+![Twitter](https://img.shields.io/twitter/follow/LovisWilly.svg?style=social) 
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 Bot para o Telegram. Retorna e manda cotações das moedas desejadas como Dólar para Real Brasileiro.
 Projeto _open-source_ que você pode colaborar aqui no GitHub ou apenas deixando o seu feedback.
 
