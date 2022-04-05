@@ -15,26 +15,26 @@ Projeto _open-source_ que você pode colaborar aqui no GitHub ou apenas deixando
 - [Changelog](#changelog)
 
 # Tecnologias utilizadas #
-- Python
-    - pyTelegrambotAPI
-    - JSON
-    - requests
+- [Python](https://www.python.org)
+    - [pyTelegrambotAPI](https://pypi.org/project/pyTelegramBotAPI/)
+    - [JSON](https://docs.python.org/3/library/json.html)
+    - [requests](https://docs.python-requests.org/en/latest/)
+    - APIS
+        - [HG Brasil Finance](https://www.mercadobitcoin.com.br/api-doc/)
+        - [Mercado Bitcoin](https://console.hgbrasil.com/documentation/finance)
 - Heroku
-- Sublime Text
 - Visual Studio Code
 - Linux Mint
 
-# Comandos (v0.1) #
+# Comandos (v0.3) #
 
-| Comando | Descrição |
-| ------- | --------- |
-| `/start` | Inicia o bot |
-| `/ajuda` | Mostra a lista de comandos disponíveis |
-| `/criador` | Lhe mostra um pouco sobre mim e o projeto |
+| Comando | Descrição | Comando | Descrição |
+| ------- | --------- | ------- | --------- |
+| `/start` | Inicia o bot | `/cadbrl` | Retorna valor da conversão do Dólar Canadense para Real Brasileiro |
+| `/ajuda` | Mostra a lista de comandos disponíveis | `/audbrl` | Retorna valor da conversão do Dólar Australiano para Real Brasileiro |
+| `/criador` | Lhe mostra um pouco sobre mim e o projeto | `/yenbrl` | Retorna valor da conversão do Yene Japonês para Real Brasileiro |
 | `/usdbrl` | Retorna valor da conversão do Dólar para Real Brasileiro |
-| `/brlusd` | Retorna o valor da conversão do Real Brasileiro para o Dólar |
 | `/eurbrl` | Retorna o valor da conversão do Euro para Real Brasileiro |
-| `/brleur` | Retorna o valor da conversão do Real Brasileiro para Euro |
 | `/btc` | Retorna o valor do Bitcoin |
 | `/eth` | Retorna o valor do Ethereum |
 
@@ -45,3 +45,22 @@ Projeto _open-source_ que você pode colaborar aqui no GitHub ou apenas deixando
 **Hospedado no Heroku**
 
 ### 0.2 (BETA) ###
+- - -
+**04/04/2022**
+**-Adicionado Novos comandos:**
+- `/cadbrl`, `/audbrl`, `/yenbrl`
+
+**-Comandos Removidos:**
+- `brleur`, `brlusd`
+
+**Nova API:**
+- HG Brasil Finance
+- Mercado Bitcoin
+Sai API: _AwesomeAPI_
+
+### 0.3 (BETA ) ##
+- - -
+**05/04/2022**
+**Corrigido: Erros ortográficos**
+`/ajuda` **atualizada**
+Melhoria: **Valores retornados mostram suas fontes**
