@@ -56,6 +56,7 @@ Projeto _open-source_ que você pode colaborar aqui no GitHub ou apenas deixando
 **Nova API:**
 - HG Brasil Finance
 - Mercado Bitcoin
+
 Sai API: _AwesomeAPI_
 
 ### 0.3 (BETA ) ##
