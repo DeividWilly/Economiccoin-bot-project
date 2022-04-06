@@ -3,13 +3,28 @@
     <br><a href="https://t.me/economiccoin_bot" target="_blank"><img src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"></a>
 </h1>
 
-![Twitter](https://img.shields.io/twitter/follow/LovisWilly.svg?style=social) <br>
-![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)<br>
+<div align="center">
+    <img src="https://img.shields.io/github/forks/DeividWilly/Economiccoin-bot-project?style=social"/>
+    <img src="https://img.shields.io/github/stars/DeividWilly/Economiccoin-bot-project?style=social"/>
+</div>
+<div align="center">
+    <img src="https://img.shields.io/github/repo-size/DeividWilly/Economiccoin-bot-project"/>
+    <img src="https://img.shields.io/github/last-commit/DeividWilly/Economiccoin-bot-project"/>
+    <img src="https://img.shields.io/pypi/pyversions/Scrapy.svg"/>
+</div>
+<div align="center">
+    <img src="https://img.shields.io/badge/heroku-%23430098.svg?style=?style=plastic&logo=appveyor&logo=heroku&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=flat&logo=appveyor&logo=visual-studio-code&logoColor=white"/>
+</div>
+<div align="center">
+    <img src="https://img.shields.io/twitter/follow/LovisWilly.svg?style=social"/>
+</div>
+<br>
 Bot para o Telegram. Retorna e manda cotações das moedas desejadas como Dólar para Real Brasileiro.
 Projeto _open-source_ que você pode colaborar aqui no GitHub ou apenas deixando o seu feedback.
-
-<img align="center" src="imgs-readme/effigy_crying-3.jpg"/>
-
+<div align="center">
+    <img src="imgs-readme/effigy_crying-3.jpg"/>
+</div>
 # Menu #
 
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
@@ -66,7 +81,9 @@ Sai API: _AwesomeAPI_
 **05/04/2022**
 
 **Corrigido: Erros ortográficos**
+
 `/ajuda` **atualizada**
+
 Melhoria: **Valores retornados mostram suas fontes**
 
 # Autor <br>
