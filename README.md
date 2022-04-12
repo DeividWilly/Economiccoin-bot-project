@@ -25,6 +25,7 @@ Projeto _open-source_ que você pode colaborar aqui no GitHub ou apenas deixando
 <div align="center">
     <img src="imgs-readme/effigy_crying-3.jpg"/>
 </div>
+
 # Menu #
 
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
