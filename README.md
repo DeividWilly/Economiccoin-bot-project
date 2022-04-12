@@ -19,7 +19,7 @@
 <div align="center">
     <img src="https://img.shields.io/twitter/follow/LovisWilly.svg?style=social"/>
 </div>
-<br>
+
 Bot para o Telegram. Retorna e manda cotações das moedas desejadas como Dólar para Real Brasileiro.
 Projeto _open-source_ que você pode colaborar aqui no GitHub ou apenas deixando o seu feedback.
 <div align="center">
