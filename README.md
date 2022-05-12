@@ -44,7 +44,7 @@ Projeto _open-source_ que você pode colaborar aqui no GitHub ou apenas deixando
 - Visual Studio Code
 - Linux Ubuntu 21.10
 
-# Comandos (v0.3) #
+# Comandos (v0.4) #
 
 | Comando | Descrição | Comando | Descrição |
 | ------- | --------- | ------- | --------- |
