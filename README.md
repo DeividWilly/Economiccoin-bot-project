@@ -22,6 +22,7 @@
 
 Bot para o Telegram. Retorna e manda cotações das moedas desejadas como Dólar para Real Brasileiro.
 Projeto _open-source_ que você pode colaborar aqui no GitHub ou apenas deixando o seu feedback.
+**Site**: https://deividwilly.github.io/Economiccoin-bot-project/
 <div align="center">
     <img src="imgs-readme/effigy_crying-3.jpg"/>
 </div>
