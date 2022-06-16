@@ -1,4 +1,4 @@
-requests
-pyTelegrambotapi
-setuptools
+requests==2.25.1
+pyTelegrambotapi==4.4.1
+setuptools==52.0.0
 datetime

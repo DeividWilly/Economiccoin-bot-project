@@ -32,6 +32,7 @@ Projeto _open-source_ que você pode colaborar aqui no GitHub ou apenas deixando
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Comandos](#comandos-v01)
 - [Changelog](#changelog)
+- [Autor](#autor-br)
 
 # Tecnologias utilizadas #
 - [Python](https://www.python.org)
