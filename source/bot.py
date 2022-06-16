@@ -12,7 +12,7 @@ bot = telebot.TeleBot(API_TOKEN)
 def send_welcome(message):
 	cid = message.chat.id
 	msg = bot.reply_to(message, 'Olá, seja bem-vindo ao Coin Bot! Você pode ver o preço de cada moeda na cotação atual dela.\nDigite /ajuda para abrir a lista de comandos!')
-	bot.send_message(cid,'Bot criado por @WillyDev.\nDeixe o seu feedback e veja as atualizaçoes no nosso GitHub: ')
+	bot.send_message(cid,'Bot criado por @WillyDev.\n')
 
 # Ajuda
 
@@ -73,23 +73,6 @@ def send_gbpbrl(message):
 	gbpbrl_var = GBPBRL_DICT['results']['currencies']['GBP']['variation']
 	bot.reply_to(message, f'💶*Libra/Real Brasileiro*\n\n📊*Valor*: {gbpbrl_buy}\n\n📈*Variação em percentual referente à última hora útil anterior*: {gbpbrl_var}%\n*Fonte*: _HG Brasil Finance_', parse_mode='Markdown')
 
-# Peso Argentino - Real
-
-# @bot.message_handler(commands=['arsbrl'])
-# def send_arsbrl(message):
-# 	ARSBRL_DICT = requests.get(f"https://api.hgbrasil.com/finance?key={bot_token.FINANCE}").json()
-# 	arsbrl_buy = ARSBRL_DICT['results']['currencies']['ARS']['buy']
-# 	arsbrl_var = ARSBRL_DICT['results']['currencies']['ARS']['variation']
-# 	bot.reply_to(message, f'💵*Peso Argentino/Real Brasileiro*\n\n📊*Valor*: {arsbrl_buy}\n\n📈*Variação em percentual referente à última hora útil: {arsbrl_var}%\n*Fonte*: _HG Brasil Finance_', parse_mode='Markdown')
-
-# Yene Japônes - Real
-
-# @bot.message_handler(commands=['yenbrl'])
-# def send_yenbrl(message):
-# 	JPYBRL_DICT = requests.get(f"https://api.hgbrasil.com/finance?key={bot_token.FINANCE}").json()
-# 	jpybrl_buy = JPYBRL_DICT['results']['currencies']['JPY']['buy']
-# 	jpybrl_var = JPYBRL_DICT['results']['currencies']['JPY']['variation']
-# 	bot.reply_to(message, f'💵*Yene Japônes/Real Brasileiro*\n\n📊*Valor*: {jpybrl_buy}\n\n📈*Variação em percentual referente à última hora útil: {jpybrl_var}\n*Fonte*: _HG Brasil Finance_', parse_mode='Markdown')
 
 # Bitcoin
 @bot.message_handler(commands=['btc'])
