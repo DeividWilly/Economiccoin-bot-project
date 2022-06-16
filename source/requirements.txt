@@ -1,0 +1,4 @@
+requests
+pyTelegrambotapi
+setuptools
+datetime
