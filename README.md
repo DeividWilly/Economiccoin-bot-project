@@ -31,7 +31,6 @@ Projeto _open-source_ que você pode colaborar aqui no GitHub ou apenas deixando
 
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Comandos](#comandos-v01)
-- [Changelog](#changelog)
 - [Autor](#autor-br)
 
 # Tecnologias utilizadas #
@@ -46,7 +45,7 @@ Projeto _open-source_ que você pode colaborar aqui no GitHub ou apenas deixando
 - Visual Studio Code
 - Linux Ubuntu 21.10
 
-# Comandos (v0.4) #
+# Comandos (v0.5) #
 
 | Comando | Descrição | Comando | Descrição |
 | ------- | --------- | ------- | --------- |
@@ -54,56 +53,10 @@ Projeto _open-source_ que você pode colaborar aqui no GitHub ou apenas deixando
 | `/ajuda` | Mostra a lista de comandos disponíveis | `/audbrl` | Retorna valor da conversão do Dólar Australiano para Real Brasileiro |
 | `/criador` | Lhe mostra um pouco sobre mim e o projeto | `/selic` | Retorna valor da Taxa Selic (Sistema Especial de Liquidação de Custódia) |
 | `/usdbrl` | Retorna valor da conversão do Dólar para Real Brasileiro | `/cdi` | Retorna o valor da Taxa CDI (Certificado de Depósito Interbancário)
-| `/eurbrl` | Retorna o valor da conversão do Euro para Real Brasileiro |
+| `/eurbrl` | Retorna o valor da conversão do Euro para Real Brasileiro | `/gbpbrl` | Retorna o valor da conversão da Libra para Real Brasileiro |
 | `/btc` | Retorna o valor do Bitcoin |
 | `/eth` | Retorna o valor do Ethereum |
 
-# Changelog #
-### 0.1 (BETA) ###
-- - -
-**02/04/2022** - Bot finalmente colocado ao ar.
-**Hospedado no Heroku**
-
-### 0.2 (BETA) ###
-- - -
-**04/04/2022**
-
-**-Adicionado Novos comandos:**
-- `/cadbrl`, `/audbrl`, `/yenbrl`
-
-**-Comandos Removidos:**
-- `brleur`, `brlusd`
-
-**Nova API:**
-- HG Brasil Finance
-- Mercado Bitcoin
-
-Sai API: _AwesomeAPI_
-
-### 0.3 (BETA) ##
-- - -
-**05/04/2022**
-
-**Corrigido: Erros ortográficos**
-
-`/ajuda` **atualizada**
-
-Melhoria: **Valores retornados mostram suas fontes**
-
-
-### 0.4 (BETA) ###
-- - -
-**20/04/2022**
-
-**Corrigido: Bug de moedas desatualizadas**
-
-**-Comandos removidos:**
-- `yenbrl`
-
-**-Adicionado Novos comandos:**
-- `/cdi`, `/selic`
-
-**Melhorias na `/ajuda`.**
 
 # Autor <br>
 
