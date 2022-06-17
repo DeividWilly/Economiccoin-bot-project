@@ -1,9 +1,11 @@
 import telebot
 import json
-from datetime import datetime
 import requests
 import bot_token
+from datetime import datetime
+from pytz import timezone
 
+fuse = timezone('America/Sao_Paulo')
 API_TOKEN = bot_token.TOKEN
 bot = telebot.TeleBot(API_TOKEN)
 # Start
@@ -11,16 +13,15 @@ bot = telebot.TeleBot(API_TOKEN)
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
 	cid = message.chat.id
-	msg = bot.reply_to(message, 'Olá, seja bem-vindo ao Coin Bot! Você pode ver o preço de cada moeda na cotação atual dela.\nDigite /ajuda para abrir a lista de comandos!')
-	bot.send_message(cid,'Bot criado por @WillyDev.\n')
 
+	msg = bot.reply_to(message, 'Olá, seja bem-vindo ao Coin Bot! Você pode ver o preço de cada moeda na cotação atual dela.\nDigite /ajuda para abrir a lista de comandos!')
+	bot.send_message(cid,"Bot criado por @WillyDev.\nAcesse o nosso Github e colabore clicando <a href='https://github.com/DeividWilly/Economiccoin-bot-project'>aqui</a>.", parse_mode='HTML')
+	
 # Ajuda
 
 @bot.message_handler(commands=['ajuda'])
 def send_help(message):
-	msg_help = bot.reply_to(message, '🤖💱Lista de comandos🤖💱:\n\n*💵💶Moedas*:\n\n/usdbrl - *Preço do Dólar em Real Brasileiro.*\n\n/cadbrl - *Preço do Dolar Canadense em Real Brasileiro.*\n\n/yenbrl - *Preço do Yene Japones em Real Brasileiro.*\n\n/audbrl - *Preço do Dolar Australiano em Real Brasileiro.*\n\n💰*Criptomoedas*:\n\n/eth - *Preço do Etherum em Real Brasileiro.*\n\n/btc - *Preço do Bitcoin em Real Brasileiro.*\n\n📈Taxas:\n\n/cdi - *CDI (Certificado de Depósito Interbancário)*\n\n/selic - *Selic (Sistema Especial de Liquidação de Custódia)*', parse_mode= 'Markdown')
-	# 🤖💱Lista de comandos🤖💱:\n\n*💵💶Moedas*:\n\n/usdbrl - *Preço do Dólar em Real Brasileiro.*\n\n/cadbrl - *Preço do Dolar Canadense em Real Brasileiro.*\n\n/yenbrl - *Preço do Yene Japones em Real Brasileiro.*\n\n*/audbrl - Preço do Dolar Australiano em Real Brasileiro.*\n\n💰*Criptomoedas*:\n\n/eth - *Preço do Etherum em Real Brasileiro.*\n\n/btc - *Preço do Bitcoin em Real Brasileiro.*\n\n📈Taxas:\n\n/cdi - *CDI - Certificado de Depósito Interbancário*\n\n/selic - *Selic - Sistema Especial de Liquidação de Custódia*
-
+	msg_help = bot.reply_to(message, '🤖💱Lista de comandos🤖💱:\n\n*💵💶Moedas*:\n\n/usdbrl - *Preço do Dólar em Real Brasileiro.*\n\n/cadbrl - *Preço do Dolar Canadense em Real Brasileiro.*\n\n/gbpbrl - *Preço da Libra em Real Brasileiro.*\n\n/audbrl - *Preço do Dolar Australiano em Real Brasileiro.*\n\n/eurbrl - *Euro em Real Brasileiro.*\n\n💰*Criptomoedas*:\n\n/eth - *Preço do Etherum em Real Brasileiro.*\n\n/btc - *Preço do Bitcoin em Real Brasileiro.*\n\n📈Taxas:\n\n/cdi - *CDI (Certificado de Depósito Interbancário)*\n\n/selic - *Selic (Sistema Especial de Liquidação de Custódia)*', parse_mode= 'Markdown')
 
 # Criador
 
@@ -32,10 +33,15 @@ def send_creator(message):
 
 @bot.message_handler(commands=['usdbrl'])
 def send_usdbrl(message):
+	cid = message.chat.id
+
 	USDBRL_DICT = requests.get(f"https://api.hgbrasil.com/finance?key={bot_token.FINANCE}").json()
 	usdbrl_buy = USDBRL_DICT['results']['currencies']['USD']['buy']
 	usdbrl_var = USDBRL_DICT['results']['currencies']['USD']['variation']
+
 	bot.reply_to(message, f'💵*Dólar Americano/Real Brasileiro*\n\n📊*Valor*: {usdbrl_buy}\n\n📈*Variação em percentual referente à última hora útil anterior*: {usdbrl_var}%\n*Fonte*: _HG Brasil Finance_',parse_mode='Markdown')
+	if usdbrl_buy > 5:
+		bot.send_message(cid, '*5 conto kkkkkk*😭\n', parse_mode='Markdown')
 
 # Dólar Canadense - Real
 
@@ -44,6 +50,7 @@ def send_cadbrl(message):
 	CADBRL_DICT = requests.get(f"https://api.hgbrasil.com/finance?key={bot_token.FINANCE}").json()
 	cadbrl_buy = CADBRL_DICT['results']['currencies']['CAD']['buy']
 	cadbrl_var = CADBRL_DICT['results']['currencies']['CAD']['variation']
+
 	bot.reply_to(message, f'💵*Dólar Canadense/Real Brasileiro*\n\n📊*Valor*: {cadbrl_buy}\n\n📈*Variação em percentual referente à última hora útil anterior*: {cadbrl_var}%\n*Fonte*: _HG Brasil Finance_', parse_mode='Markdown')
 
 # Dólar Australiano - Real
@@ -53,6 +60,7 @@ def send_audbrl(message):
 	AUDBRL_DICT = requests.get(f"https://api.hgbrasil.com/finance?key={bot_token.FINANCE}").json()
 	audbrl_buy = AUDBRL_DICT['results']['currencies']['CAD']['buy']
 	audbrl_var = AUDBRL_DICT['results']['currencies']['CAD']['variation']
+
 	bot.reply_to(message, f'💵*Dólar Australiano/Real Brasileiro*\n\n📊*Valor*: {audbrl_buy}\n\n📈*Variação em percentual referente à última hora útil anterior*: {audbrl_var}%\n*Fonte*: _HG Brasil FInance_', parse_mode='Markdown')
 
 # Euro - Real
@@ -62,6 +70,7 @@ def send_eurbrl(message):
 	EURBRL_DICT = requests.get(f"https://api.hgbrasil.com/finance?key={bot_token.FINANCE}").json()
 	eurbrl_buy = EURBRL_DICT['results']['currencies']['EUR']['buy']
 	eurbrl_var = EURBRL_DICT['results']['currencies']['EUR']['variation']
+
 	bot.reply_to(message, f'💶*Euro/Real Brasileiro*\n\n📊*Valor*: {eurbrl_buy}\n\n*📈Variação em percentual referente à última hora útil anterior*: {eurbrl_var}%\n*Fonte*: _HG Brasil Finance_',parse_mode='Markdown')
 
 # Libra - Real
@@ -71,6 +80,7 @@ def send_gbpbrl(message):
 	GBPBRL_DICT = requests.get(f"https://api.hgbrasil.com/finance?key={bot_token.FINANCE}").json()
 	gbpbrl_buy = GBPBRL_DICT['results']['currencies']['GBP']['buy']
 	gbpbrl_var = GBPBRL_DICT['results']['currencies']['GBP']['variation']
+
 	bot.reply_to(message, f'💶*Libra/Real Brasileiro*\n\n📊*Valor*: {gbpbrl_buy}\n\n📈*Variação em percentual referente à última hora útil anterior*: {gbpbrl_var}%\n*Fonte*: _HG Brasil Finance_', parse_mode='Markdown')
 
 
@@ -81,8 +91,10 @@ def send_btc(message):
 	btc_buy = float(price_btc['ticker']['buy'])
 	btc_high = float(price_btc['ticker']['high'])
 	btc_low = float(price_btc['ticker']['low'])
-	btc_date = datetime.utcfromtimestamp(int(price_btc['ticker']['date'])).strftime('%H:%M:%S %d-%m-%Y')
-	bot.reply_to(message, f'💰*Bitcoin/Real Brasileiro*\n\n📊*Valor*: {btc_buy:.2f}\n\n📈*Valor máximo*: {btc_high:.2f}\n\n🔙💲*Valor mínimo*: {btc_low:.2f}\n\n⏱*Última atualização*: {btc_date}\n\n🚨*Preços podem variar de acordo por cada corretora!*🚨\n*Fonte*: _MercadoBitcoin_',parse_mode='Markdown')
+
+	btc_date = datetime.now().astimezone(fuse).strftime('%d/%m/%Y %H:%M')
+
+	bot.reply_to(message, f'💰*Bitcoin/Real Brasileiro*\n\n📊*Valor*: {btc_buy:.2f}\n\n📈*Valor máximo*: {btc_high:.2f}\n\n🔙💲*Valor mínimo*: {btc_low:.2f}\n\n⏱*Última consulta*: {btc_date}\n\n🚨*Preços podem variar de acordo por cada corretora!*🚨\n*Fonte*: _MercadoBitcoin_',parse_mode='Markdown')
 
 # Ethereum
 @bot.message_handler(commands=['eth'])
@@ -91,8 +103,10 @@ def send_eth(message):
 	eth_buy = float(price_eth['ticker']['buy'])
 	eth_high = float(price_eth['ticker']['high'])
 	eth_low = float(price_eth['ticker']['low'])
-	eth_date = datetime.utcfromtimestamp(int(price_eth['ticker']['date'])).strftime('%H:%M:%S %d/%m/%Y0')
-	bot.reply_to(message, f'💰*Ethereum/Real Brasileiro*\n\n📊*Valor*: {eth_buy:.2f}\n\n📈*Valor máximo*: {eth_high:.2f}\n\n🔙💲*Valor mínimo*: {eth_low:.2f}\n\n⏱*Última atualização*: {eth_date}\n\n🚨*Preços podem variar de acordo por cada corretora!*🚨\n*Fonte*: _MercadoBitcoin_',parse_mode='Markdown')
+
+	eth_date = datetime.now().astimezone(fuse).strftime('%d/%m/%Y %H:%M')
+
+	bot.reply_to(message, f'💰*Ethereum/Real Brasileiro*\n\n📊*Valor*: {eth_buy:.2f}\n\n📈*Valor máximo*: {eth_high:.2f}\n\n🔙💲*Valor mínimo*: {eth_low:.2f}\n\n⏱*Última consulta*: {eth_date}\n\n🚨*Preços podem variar de acordo por cada corretora!*🚨\n*Fonte*: _MercadoBitcoin_',parse_mode='Markdown')
 
 # SELIC
 
@@ -100,6 +114,7 @@ def send_eth(message):
 def send_selic(message):
 	chat_id = message.chat.id
 	SELIC_DICT = requests.get(f"https://api.hgbrasil.com/finance/taxes?key={bot_token.FINANCE}").json()
+
 	selic = SELIC_DICT['results'][0]['selic']
 	selic_daily = SELIC_DICT['results'][0]['selic_daily']
 	daily_factor = SELIC_DICT['results'][0]['daily_factor']
@@ -114,6 +129,7 @@ def send_selic(message):
 def send_cdi(message):
 	chat_id = message.chat.id
 	CDI_DICT = requests.get(f"https://api.hgbrasil.com/finance/taxes?key={bot_token.FINANCE}").json()
+
 	cdi = CDI_DICT['results'][0]['cdi']
 	cdi_daily = CDI_DICT['results'][0]['cdi_daily']
 	daily_factor = CDI_DICT['results'][0]['daily_factor']
